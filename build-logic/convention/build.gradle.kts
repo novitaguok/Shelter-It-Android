@@ -53,6 +53,10 @@ gradlePlugin {
             id = libs.plugins.shelterit.android.library.asProvider().get().pluginId
             implementationClass = "AndroidLibraryConventionPlugin"
         }
+        register("androidLibraryCompose") {
+            id = libs.plugins.shelterit.android.library.compose.get().pluginId
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
         register("androidRoom") {
             id = libs.plugins.shelterit.android.room.get().pluginId
             implementationClass = "AndroidRoomConventionPlugin"

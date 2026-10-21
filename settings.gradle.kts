@@ -25,3 +25,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "shelterit"
 include(":app")
+include(":core")
+include(":core:designsystem")
