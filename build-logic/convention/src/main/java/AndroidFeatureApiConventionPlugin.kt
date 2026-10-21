@@ -6,7 +6,7 @@ import org.gradle.kotlin.dsl.dependencies
 class AndroidFeatureApiConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            apply(plugin = "boilerplate.android.library")
+            apply(plugin = "shelterit.android.library")
             apply(plugin = "org.jetbrains.kotlin.plugin.serialization")
 
             // TODO(uncomment)

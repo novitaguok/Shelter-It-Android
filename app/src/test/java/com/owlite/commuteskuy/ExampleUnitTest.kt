@@ -1,4 +1,4 @@
-package com.novitaguok.boilerplate
+package com.novitaguok.shelterit
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

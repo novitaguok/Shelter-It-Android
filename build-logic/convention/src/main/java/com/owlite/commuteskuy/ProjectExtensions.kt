@@ -1,4 +1,4 @@
-package com.novitaguok.boilerplate
+package com.novitaguok.shelterit
 
 import org.gradle.api.Project
 import org.gradle.api.artifacts.VersionCatalog

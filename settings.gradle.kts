@@ -23,5 +23,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "boilerplate"
+rootProject.name = "shelterit"
 include(":app")

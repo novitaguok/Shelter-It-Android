@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.novitaguok.boilerplate"
+    namespace = "com.novitaguok.shelterit"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.novitaguok.boilerplate"
+        applicationId = "com.novitaguok.shelterit"
         minSdk = 25
         targetSdk = 37
         versionCode = 1

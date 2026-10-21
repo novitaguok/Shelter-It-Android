@@ -1,5 +1,5 @@
 import com.android.build.api.dsl.LibraryExtension
-import com.novitaguok.boilerplate.libs
+import com.novitaguok.shelterit.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
@@ -9,8 +9,8 @@ import org.gradle.kotlin.dsl.dependencies
 class AndroidFeatureImplConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            apply(plugin = "boilerplate.android.library")
-            apply(plugin = "boilerplate.hilt")
+            apply(plugin = "shelterit.android.library")
+            apply(plugin = "shelterit.hilt")
 
             extensions.configure<LibraryExtension> {
                 testOptions.animationsDisabled = true

@@ -1,4 +1,4 @@
-package com.novitaguok.boilerplate
+package com.novitaguok.shelterit
 
 import com.android.build.api.dsl.CommonExtension
 import org.gradle.api.Project

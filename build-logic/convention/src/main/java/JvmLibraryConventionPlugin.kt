@@ -1,5 +1,5 @@
-import com.novitaguok.boilerplate.configureKotlinJvm
-import com.novitaguok.boilerplate.libs
+import com.novitaguok.shelterit.configureKotlinJvm
+import com.novitaguok.shelterit.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply

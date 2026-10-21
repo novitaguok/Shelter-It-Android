@@ -66,19 +66,19 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 room = { id = "androidx.room", version.ref = "room" }
 
 # Plugins defined in this project
-boilerplate-android-application = { id = "boilerplate.android.application" }
-boilerplate-android-application-compose = { id = "boilerplate.android.application.compose" }
-boilerplate-android-application-firebase = { id = "boilerplate.android.application.firebase" }
-boilerplate-android-application-flavors = { id = "boilerplate.android.application.flavors" }
-boilerplate-android-application-jacoco = { id = "boilerplate.android.application.jacoco" }
-boilerplate-android-feature-impl = { id = "boilerplate.android.feature.impl" }
-boilerplate-android-feature-api = { id = "boilerplate.android.feature.api" }
-boilerplate-android-library = { id = "boilerplate.android.library" }
-boilerplate-android-library-compose = { id = "boilerplate.android.library.compose" }
-boilerplate-android-library-jacoco = { id = "boilerplate.android.library.jacoco" }
-boilerplate-android-lint = { id = "boilerplate.android.lint" }
-boilerplate-android-room = { id = "boilerplate.android.room" }
-boilerplate-android-test = { id = "boilerplate.android.test" }
-boilerplate-hilt = { id = "boilerplate.hilt" }
-boilerplate-jvm-library = { id = "boilerplate.jvm.library" }
-boilerplate-root = { id = "boilerplate.root" }
+shelterit-android-application = { id = "shelterit.android.application" }
+shelterit-android-application-compose = { id = "shelterit.android.application.compose" }
+shelterit-android-application-firebase = { id = "shelterit.android.application.firebase" }
+shelterit-android-application-flavors = { id = "shelterit.android.application.flavors" }
+shelterit-android-application-jacoco = { id = "shelterit.android.application.jacoco" }
+shelterit-android-feature-impl = { id = "shelterit.android.feature.impl" }
+shelterit-android-feature-api = { id = "shelterit.android.feature.api" }
+shelterit-android-library = { id = "shelterit.android.library" }
+shelterit-android-library-compose = { id = "shelterit.android.library.compose" }
+shelterit-android-library-jacoco = { id = "shelterit.android.library.jacoco" }
+shelterit-android-lint = { id = "shelterit.android.lint" }
+shelterit-android-room = { id = "shelterit.android.room" }
+shelterit-android-test = { id = "shelterit.android.test" }
+shelterit-hilt = { id = "shelterit.hilt" }
+shelterit-jvm-library = { id = "shelterit.jvm.library" }
+shelterit-root = { id = "shelterit.root" }

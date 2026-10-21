@@ -1,4 +1,4 @@
-package com.novitaguok.boilerplate.ui.theme
+package com.novitaguok.shelterit.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -33,7 +33,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun boilerplateTheme(
+fun shelteritTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,

@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.jvm)
 }
 
-group = "com.novitaguok.boilerplate.buildlogic"
+group = "com.novitaguok.shelterit.buildlogic"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -30,43 +30,43 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplication") {
-            id = libs.plugins.boilerplate.android.application.asProvider().get().pluginId
+            id = libs.plugins.shelterit.android.application.asProvider().get().pluginId
             implementationClass = "AndroidApplicationConventionPlugin"
         }
         register("androidApplicationCompose") {
-            id = libs.plugins.boilerplate.android.application.compose.get().pluginId
+            id = libs.plugins.shelterit.android.application.compose.get().pluginId
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidFlavors") {
-            id = libs.plugins.boilerplate.android.application.flavors.get().pluginId
+            id = libs.plugins.shelterit.android.application.flavors.get().pluginId
             implementationClass = "AndroidApplicationFlavorsConventionPlugin"
         }
         register("androidFeatureApi") {
-            id = libs.plugins.boilerplate.android.feature.api.get().pluginId
+            id = libs.plugins.shelterit.android.feature.api.get().pluginId
             implementationClass = "AndroidFeatureApiConventionPlugin"
         }
         register("androidFeatureImpl") {
-            id = libs.plugins.boilerplate.android.feature.impl.get().pluginId
+            id = libs.plugins.shelterit.android.feature.impl.get().pluginId
             implementationClass = "AndroidFeatureImplConventionPlugin"
         }
         register("androidLibrary") {
-            id = libs.plugins.boilerplate.android.library.asProvider().get().pluginId
+            id = libs.plugins.shelterit.android.library.asProvider().get().pluginId
             implementationClass = "AndroidLibraryConventionPlugin"
         }
         register("androidRoom") {
-            id = libs.plugins.boilerplate.android.room.get().pluginId
+            id = libs.plugins.shelterit.android.room.get().pluginId
             implementationClass = "AndroidRoomConventionPlugin"
         }
         register("androidTest") {
-            id = libs.plugins.boilerplate.android.test.get().pluginId
+            id = libs.plugins.shelterit.android.test.get().pluginId
             implementationClass = "AndroidTestConventionPlugin"
         }
         register("hilt") {
-            id = libs.plugins.boilerplate.hilt.get().pluginId
+            id = libs.plugins.shelterit.hilt.get().pluginId
             implementationClass = "HiltConventionPlugin"
         }
         register("jvmLibrary") {
-            id = libs.plugins.boilerplate.jvm.library.get().pluginId
+            id = libs.plugins.shelterit.jvm.library.get().pluginId
             implementationClass = "JvmLibraryConventionPlugin"
         }
     }

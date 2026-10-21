@@ -1,4 +1,4 @@
-package com.novitaguok.boilerplate.ui.theme
+package com.novitaguok.shelterit.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
