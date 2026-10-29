@@ -100,3 +100,4 @@ shelterit-android-test = { id = "shelterit.android.test" }
 shelterit-hilt = { id = "shelterit.hilt" }
 shelterit-jvm-library = { id = "shelterit.jvm.library" }
 shelterit-root = { id = "shelterit.root" }
+
