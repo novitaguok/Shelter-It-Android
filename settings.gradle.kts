@@ -24,6 +24,10 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "shelterit"
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
 include(":core")
 include(":core:designsystem")
+include(":feature:onboarding:api")
+include(":feature:onboarding:impl")

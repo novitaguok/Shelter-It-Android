@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feature_onboarding_impl_first_page_title">Every pet deserves a home.</string>
+    <string name="feature_onboarding_impl_first_page_desc">Shelter It connects stray, surrendered and shelter pets with people ready to love them.</string>
+    <string name="feature_onboarding_impl_first_page_get_started">Get started</string>
+</resources>

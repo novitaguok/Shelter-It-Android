@@ -1,25 +1,26 @@
+import com.novitaguok.shelterit.ShelterItBuildType
+
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.shelterit.android.application)
+    alias(libs.plugins.shelterit.android.application.compose)
+    alias(libs.plugins.shelterit.android.application.flavors)
+    alias(libs.plugins.shelterit.hilt)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
-    namespace = "com.novitaguok.shelterit"
-    compileSdk {
-        version = release(37)
-    }
-
     defaultConfig {
         applicationId = "com.novitaguok.shelterit"
-        minSdk = 25
-        targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
+    buildTypes { // TODO(check NiA)
+        debug {
+            applicationIdSuffix = ShelterItBuildType.DEBUG.applicationIdSuffix
+        }
         release {
             optimization {
                 enable = true
@@ -27,30 +28,46 @@ android {
             }
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+
+    packaging {
+        resources {
+            excludes.add("/META-INF/{AL2.0,LGPL2.1}")
+        }
     }
-    buildFeatures {
-        compose = true
-    }
+    testOptions.unitTests.isIncludeAndroidResources = true
+
+    namespace = "com.novitaguok.shelterit"
 }
 
 dependencies {
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.compose.material3)
-    implementation(libs.androidx.compose.ui)
-    implementation(libs.androidx.compose.ui.graphics)
-    implementation(libs.androidx.compose.ui.tooling.preview)
-    implementation(libs.androidx.compose.ui.text.google.fonts)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    testImplementation(libs.junit)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(libs.androidx.junit)
-    debugImplementation(libs.androidx.compose.ui.test.manifest)
-    debugImplementation(libs.androidx.compose.ui.tooling)
+    implementation(projects.feature.onboarding.api)
+    implementation(projects.feature.onboarding.impl)
+
+//    implementation(projects.core.common)
+//    implementation(projects.core.ui)
+    implementation(projects.core.designsystem)
+//    implementation(projects.core.data)
+//    implementation(projects.core.model)
+//    implementation(projects.core.analytics)
+//    implementation(projects.core.notifications)
+
+//    implementation(libs.androidx.navigation3.ui)
+    implementation(libs.androidx.compose.material3.adaptive)
+    implementation(libs.androidx.compose.material3.adaptive.layout)
+    implementation(libs.androidx.compose.material3.adaptive.navigation)
+    implementation(libs.androidx.compose.material3.adaptive.navigation3)
+    implementation(libs.androidx.compose.material3.windowSizeClass)
+    implementation(libs.androidx.core.splashscreen)
+    implementation(libs.androidx.lifecycle.runtimeCompose)
+//    implementation(libs.androidx.lifecycle.viewModel.navigation3)
+//    implementation(libs.androidx.window.core)
+//    implementation(libs.coil.kt)
+    implementation(libs.kotlinx.serialization.json)
+
+    ksp(libs.hilt.compiler)
+
+//    androidTestImplementation(projects.core.testing)
+//    androidTestImplementation(libs.androidx.compose.ui.test)
+    androidTestImplementation(libs.hilt.android.testing)
+    androidTestImplementation(libs.kotlin.test)
 }

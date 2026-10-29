@@ -11,19 +11,19 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.novitaguok.shelterit.ui.theme.shelteritTheme
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.novitaguok.shelterit.core.designsystem.theme.ShelterItTheme
+import com.novitaguok.shelterit.feature.onboarding.impl.OnboardingScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen()
         enableEdgeToEdge()
         setContent {
-            shelteritTheme {
+            ShelterItTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    OnboardingScreen {  }
                 }
             }
         }
@@ -41,7 +41,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    shelteritTheme {
+    ShelterItTheme {
         Greeting("Android")
     }
 }

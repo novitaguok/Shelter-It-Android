@@ -15,10 +15,10 @@ internal val ShelterItShapes = Shapes(
 
 // Spacing tokens (Material has no slot for these - use directly in layouts)
 object ShelterItSpacing {
-    val xs = 4.dp
-    val s = 8.dp
-    val m = 12.dp
-    val l = 16.dp
-    val xl = 24.dp
-    val xxl = 32.dp
+    val spaceXs = 4.dp
+    val spaceSm = 8.dp
+    val spaceMd = 12.dp
+    val spaceL = 16.dp
+    val spaceXl = 24.dp
+    val spaceXxl = 32.dp
 }
