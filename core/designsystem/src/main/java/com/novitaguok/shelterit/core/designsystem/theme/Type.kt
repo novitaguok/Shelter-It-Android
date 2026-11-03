@@ -106,6 +106,6 @@ internal val ShelterItTypography = Typography(
     labelSmall = TextStyle(
         fontFamily = Inter,
         fontWeight = FontWeight.Medium,
-        fontSize = 12.sp
+        fontSize = 11.sp
     ),
 )

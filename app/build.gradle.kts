@@ -40,6 +40,8 @@ android {
 }
 
 dependencies {
+    implementation(projects.feature.auth.api)
+    implementation(projects.feature.auth.impl)
     implementation(projects.feature.onboarding.api)
     implementation(projects.feature.onboarding.impl)
 

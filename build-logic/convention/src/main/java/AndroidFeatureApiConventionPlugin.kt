@@ -9,9 +9,8 @@ class AndroidFeatureApiConventionPlugin : Plugin<Project> {
             apply(plugin = "shelterit.android.library")
             apply(plugin = "org.jetbrains.kotlin.plugin.serialization")
 
-            // TODO(uncomment)
             dependencies {
-//                "api"(project("core:navigation"))
+                "api"(project(":core:navigation"))
             }
         }
     }
