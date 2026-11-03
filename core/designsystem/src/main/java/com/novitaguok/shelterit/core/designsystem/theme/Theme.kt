@@ -2,7 +2,10 @@ package com.novitaguok.shelterit.core.designsystem.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Shapes
+import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
@@ -10,6 +13,7 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -100,6 +104,8 @@ data class ExtendedColors(
     val successContainer: Color,
     val onSuccessContainer: Color,
     val surfaceBar: Color,
+    val bgGradientTop: Color,
+    val bgGradientBottom: Color,
     val heroGradient: Brush,
 )
 
@@ -107,6 +113,8 @@ private val LightExtendedColors = ExtendedColors(
     success = LightSuccess,
     successContainer = LightSuccessContainer,
     onSuccessContainer = LightOnSuccessContainer,
+    bgGradientTop = LightGradientA,
+    bgGradientBottom = LightGradientB,
     surfaceBar = LightSurfaceBar,
     heroGradient = Brush.verticalGradient(listOf(LightGradientA, LightGradientB)),
 )
@@ -116,21 +124,65 @@ private val DarkExtendedColors = ExtendedColors(
     successContainer = DarkSuccessContainer,
     onSuccessContainer = DarkOnSuccessContainer,
     surfaceBar = DarkSurfaceBar,
+    bgGradientTop = DarkGradientA,
+    bgGradientBottom = DarkGradientB,
     heroGradient = Brush.verticalGradient(listOf(DarkGradientA, DarkGradientB)),
 )
 
 val LocalExtendedColors = staticCompositionLocalOf { LightExtendedColors }
 
 object ShelterItTheme {
+    val colors: ColorScheme
+        @Composable
+        @ReadOnlyComposable
+        get() = MaterialTheme.colorScheme
+
     val extendedColors: ExtendedColors
-        @Composable get() = LocalExtendedColors.current
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalExtendedColors.current
+
+    val typography: Typography
+        @Composable
+        @ReadOnlyComposable
+        get() = MaterialTheme.typography
+
+    val shapes: Shapes
+        @Composable
+        @ReadOnlyComposable
+        get() = MaterialTheme.shapes
 }
+
+val ColorScheme.success: Color
+    @Composable
+    @ReadOnlyComposable
+    get() = ShelterItTheme.extendedColors.success
+
+val ColorScheme.successContainer: Color
+    @Composable
+    @ReadOnlyComposable
+    get() = ShelterItTheme.extendedColors.successContainer
+
+val ColorScheme.onSuccessContainer: Color
+    @Composable
+    @ReadOnlyComposable
+    get() = ShelterItTheme.extendedColors.onSuccessContainer
+
+val ColorScheme.surfaceBar: Color
+    @Composable
+    @ReadOnlyComposable
+    get() = ShelterItTheme.extendedColors.surfaceBar
+
+val ColorScheme.heroGradient: Brush
+    @Composable
+    @ReadOnlyComposable
+    get() = ShelterItTheme.extendedColors.heroGradient
 
 @Composable
 fun ShelterItTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {

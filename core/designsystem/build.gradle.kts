@@ -18,8 +18,8 @@ dependencies {
     api(libs.androidx.compose.material3.navigationSuite)
     api(libs.androidx.compose.runtime)
     api(libs.androidx.compose.ui.util)
-
-    implementation(libs.coil.kt.compose)
+    api(libs.androidx.material3)
+    api(libs.coil.kt.compose)
 
     testImplementation(libs.androidx.compose.ui.test.junit4)
 

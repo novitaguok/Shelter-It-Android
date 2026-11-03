@@ -12,14 +12,14 @@ enum class FlavorDimension {
 }
 
 @Suppress("EnumEntryName")
-enum class CsFlavor(val dimension: FlavorDimension, val applicationIdSuffix: String? = null) {
+enum class ShelterItFlavor(val dimension: FlavorDimension, val applicationIdSuffix: String? = null) {
     demo(FlavorDimension.contentType, applicationIdSuffix = "demo"),
     prod(FlavorDimension.contentType)
 }
 
 fun configureFlavors(
     commonExtension: CommonExtension,
-    flavorConfigurationBlock: ProductFlavor.(flavor: CsFlavor) -> Unit = {}
+    flavorConfigurationBlock: ProductFlavor.(flavor: ShelterItFlavor) -> Unit = {}
 ) {
     commonExtension.apply {
         FlavorDimension.entries.forEach { flavorDimension ->
@@ -27,7 +27,7 @@ fun configureFlavors(
         }
 
         productFlavors {
-            CsFlavor.entries.forEach { csFlavor ->
+            ShelterItFlavor.entries.forEach { csFlavor ->
                 register(csFlavor.name) {
                     dimension = csFlavor.dimension.name
                     flavorConfigurationBlock(this, csFlavor)
